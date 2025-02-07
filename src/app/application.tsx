@@ -22,7 +22,7 @@ const municipalityLayer = new VectorLayer({
 
 const schoolLayer = new VectorLayer({
   source: new VectorSource({
-    url: "/geojson/skoler.geojson",
+    url: "/lecture-05/api/skoler",
     format: new GeoJSON(),
   }),
 });
