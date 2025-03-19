@@ -5,10 +5,10 @@ import pg from "pg";
 const postgresql = new pg.Pool({ user: "postgres" });
 
 const app = new Hono();
-app.get("/api/hello", async (c) => {
+app.get("/", async (c) => {
   return c.text("Hello World!");
 });
-app.get("/kws2100-lecture-05/api/skoler", async (c) => {
+app.get("/api/skoler", async (c) => {
   const result = await postgresql.query(
     `select
          skolenavn, eierforhold, besoksadresse_besoksadresse_adressenavn, besoksadresse_besoksadresse_postnummer, besoksadresse_besoksadresse_poststed,
